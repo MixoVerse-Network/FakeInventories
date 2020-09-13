@@ -18,6 +18,10 @@ public class FakeInventories {
     public Optional<FakeInventory> getFakeInventory(Player player) {
         return Optional.ofNullable(FakeInventory.open.get(player));
     }
+    
+    public boolean hasFakeInv(Player p) {
+    	return getFakeInventory(p).isPresent();
+    }
 
     /**
      * @return Chest inventory
